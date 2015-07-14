@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>
+Tic-tac-toe!
+</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="gameplay.js"></script>
+
+</head>
+
+<body>
+<h1>
+A basic tic-tac-toe game implementation.
+</h1>
+
+<div  style="float:left;margin-right: 50px;">
+<table border="solid black" cellpadding="8">
+<tr>
+<td align="center">Player 1</td>
+<td align="center">Player 2</td>
+</tr>
+
+<tr>
+<td align="center" id="pscore">0</td>
+<td align="center" id="cscore">0</td>
+</tr>
+
+<tr>
+<td colspan="2"><button style="width:100%;" onclick="restart();">Restart</button></td>
+</tr>
+
+<tr>
+<td colspan="2"><button style="width:100%;" onclick="reset(1);">Reset</button></td>
+</tr>
+<tr>
+<td colspan="2"><button style="width:100%;" onclick="update();">click</button></td>
+</tr>
+
+</table>
+
+</div>
+
+<div>
+<canvas id="c0" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(0)">
+</canvas>
+<canvas id="c1" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(1)">
+</canvas>
+<canvas id="c2" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(2)">
+</canvas>
+<br>
+<canvas id="c3" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(3)">
+</canvas>
+<canvas id="c4" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(4)">
+</canvas>
+<canvas id="c5" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(5)">
+</canvas>
+<br>
+<canvas id="c6" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(6)">
+</canvas>
+<canvas id="c7" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(7)">
+</canvas>
+<canvas id="c8" width="50" height="50" style="border:1px solid black" onclick="canvasClicked(8)">
+</canvas>
+</div>
+
+<div id="invalid_warning" style="margin-left: 50px;display: none;">
+<h1> Invalid Move!</h1>
+</div>
+
+<img id='x' src="x.png" style="display:none;"/>
+<img id='o' src="o.png" style="display:none;"/>
+
+</body>
+
+
+</html>
